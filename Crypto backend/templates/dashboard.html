@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Crypto Investment Manager</title>
+<a href="/generate-report">
+<button style="padding:10px 20px;font-size:16px;margin-bottom:20px;">
+Download CSV Report
+</button>
+</a>
+<style>
+
+body{
+    font-family: Arial;
+    background:#0f172a;
+    color:white;
+    text-align:center;
+}
+
+h1{
+    color:#38bdf8;
+}
+
+.container{
+    width:80%;
+    margin:auto;
+}
+
+table{
+    width:100%;
+    margin-bottom:30px;
+    border-collapse:collapse;
+}
+
+th,td{
+    padding:12px;
+    border:1px solid #334155;
+}
+
+th{
+    background:#1e293b;
+}
+
+td{
+    background:#020617;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Crypto Investment Manager Dashboard</h1>
+
+<div class="container">
+
+<h2>Live Crypto Prices</h2>
+
+<table>
+<tr>
+<th>Coin</th>
+<th>Price (USDT)</th>
+</tr>
+
+{% for coin,price in prices.items() %}
+<tr>
+<td>{{coin}}</td>
+<td>{{price}}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+
+<h2>Recommended Investment Mix (INR)</h2>
+
+<table>
+<tr>
+<th>Coin</th>
+<th>Investment Amount</th>
+</tr>
+
+{% for coin,amount in mix.items() %}
+<tr>
+<td>{{coin}}</td>
+<td>₹ {{amount}}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+
+<h2>Risk Analysis</h2>
+
+<table>
+<tr>
+<th>Coin</th>
+<th>Status</th>
+</tr>
+
+{% for coin,risk in risks.items() %}
+<tr>
+<td>{{coin}}</td>
+<td>{{risk}}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</div>
+
+</body>
+</html>
