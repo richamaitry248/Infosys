@@ -1,2 +1,2 @@
 # Infosys
-Crypto Portfolio Manager Project- Infosys virtual springboard internship 6.0
+Crypto Portfolio Manager Project- Infosys springboard virtual internship 6.0
